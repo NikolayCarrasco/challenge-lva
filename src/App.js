@@ -64,17 +64,16 @@ export class App extends React.Component {
 
     return(
       <div className='container'>
-        <div className='title'>
-          <h1>Rentabilidad Real de los Fondos de Penciones</h1>
-        </div>
+        <h1 className='title'>Rentabilidad Real de los Fondos de Penciones</h1>
         <div className='content'>
+          <div className='tables'>
             <div className='card'>
-              <div className='card-title'>
-                <p>RENTABILIDAD REAL DE LOS FONDOS DE PENSIONES</p>
-                <p>Marzo de 2022</p>
+              <div className='card-title text-center'>
+                <p className='bold'>RENTABILIDAD REAL DE LOS FONDOS DE PENSIONES</p>
+                <p className='bold'>Marzo de 2022</p>
               </div>
-              <div className='card-body'>
-                <select>
+              <div className='card-body search text-center'>
+                <select className='slc-year'>
                   <option>2022</option>
                   <option>2021</option>
                   <option>2020</option>
@@ -83,7 +82,7 @@ export class App extends React.Component {
                   <option>2017</option>
                   <option>2016</option>
                 </select>
-                <select>
+                <select className='slc-month'>
                   <option>Enero</option>
                   <option>Febrero</option>
                   <option>Marzo</option>
@@ -97,40 +96,41 @@ export class App extends React.Component {
                   <option>Noviembre</option>
                   <option>Diciembre</option>
                 </select>
-                <button type='button' className='btn.sreach'>Buscar</button>
+                <button type='button' className='btn-search'>Buscar</button>
               </div>
             </div>
             <div className='card'>
               <div className='card-title'>
-                <div className='col'>
-                  <p>RENTABILIDAD REAL DEL FONDO TIPO A DEFLACTADA POR LA UF (1)</p>
-                  <p>Marzo de 2022 - En porcentaje</p>
+                <div className='col bb pb-1'>
+                  <p className='text-center bold'>RENTABILIDAD REAL DEL FONDO TIPO A DEFLACTADA POR LA UF (1)</p>
+                  <p className='text-center bold'>Marzo de 2022 - En porcentaje</p>
                   </div>
                 <div className='row'>
-                  <div className='col'>
-                    <p>A.F.P.</p>
+                  <div className='col afp border-right'>
+                    <p className='text-center bold'>A.F.P.</p>
                   </div>
-                  <div className='col'>
-                    <p>Del Príodo</p>
+                  <div className='col border-right'>
+                    <p className='text-center bold'>Del Príodo</p>
                     <div className='row'>
-                      <div className='col'>
-                        <p>Mar 2022</p>
+                      <div className='col border-right border-top'>
+                        <p className='text-center bold'>Mar 2022</p>
                       </div>
-                      <div className='col'>
-                        <p>Acumulado Ene 2022-Mar 2022</p>
+                      <div className='col border-top'>
+                        <p className='text-center bold'>Acumulado</p>
+                        <p className='text-center bold'>Ene 2022-Mar 2022</p>
                       </div>
                     </div>
                   </div>
                   <div className='col'>
-                    <p>Anual</p>
+                    <p className='text-center bold'>Anual</p>
                     <div className='row'>
-                      <div className='col'>
-                        <p>Últimos 12 meses</p>
-                        <p>Abr 2021-Mar 2022</p>
+                      <div className='col border-right border-top'>
+                        <p className='text-center bold'>Últimos 12 meses</p>
+                        <p className='text-center bold'>Abr 2021-Mar 2022</p>
                       </div>
-                      <div className='col'>
-                        <p>Promedio Anual Período</p>
-                        <p>27 Sep 2002 - Mar 2022</p>
+                      <div className='col border-top'>
+                        <p className='text-center bold'>Promedio Anual Período</p>
+                        <p className='text-center bold'>27 Sep 2002 - Mar 2022</p>
                       </div>
                     </div>
                   </div>
@@ -139,6 +139,7 @@ export class App extends React.Component {
               <div className='card-body'>
               </div>
             </div>
+          </div>
         </div>
       </div>
     );
